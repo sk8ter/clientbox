@@ -1,0 +1,15 @@
+apply from: JAVA_GRADLE
+apply plugin: 'war'
+apply plugin: 'spring-boot'
+
+
+dependencies {
+    /* Persistence */
+    compile project(":persistence")
+
+    /* Web */
+    compile("org.springframework.boot:spring-boot-starter-web")
+    providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
+
+    testCompile("org.springframework.boot:spring-boot-starter-test")
+}
